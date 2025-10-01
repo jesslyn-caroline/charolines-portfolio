@@ -5,6 +5,7 @@ import Sentifica from "./sentifica"
 import Pyfarm from "./pyfarm"
 import Kaitosoft from "./kaitosoft"
 import Cinnamon from "./cinnamon"
+import Fukuro from "./fukuro"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/pyfarm" element={<Pyfarm />} />
         <Route path="/kaitosoft" element={<Kaitosoft />} />
         <Route path="/cinnamon" element={<Cinnamon />} />
+        <Route path="/fukuro" element={<Fukuro />} />
       </Route>
     </Routes>
   )

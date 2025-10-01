@@ -10,6 +10,7 @@ function Layout() {
         { "path" : "/pyfarm", "name" : "PyFarm: Harvesting Game" },
         { "path" : "/kaitosoft", "name" : "Kaitosoft" },
         { "path" : "/cinnamon", "name" : "Cinnamon" },
+        { "path" : "/fukuro", "name" : "fukuro" },
     ]
 
     const location = useLocation()
@@ -37,8 +38,7 @@ function Layout() {
                     <Outlet />
                 </div>
             </div>
-        </div>
-        
+        </div>     
     </div>
     )
 }
