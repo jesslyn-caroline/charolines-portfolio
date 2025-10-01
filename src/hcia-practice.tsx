@@ -20,7 +20,7 @@ function HCIAPractice() {
 
         <div className={`text-md flex flex-col space-y-1`}>
             <h2 className={`font-bold`}>Features</h2>
-            <div className={`grid grid-cols-2 md:grid-cols-2 gap-5`}>
+            <div className={`grid grid-rows-2 md:grid-cols-2 gap-y-1 gap-x-5`}>
                 <div className={`text-sm flex flex-col gap-y-1`}>
                     <span className={`font-semibold`}>Students</span>
                     <ul className={`text-black pl-5`}>
@@ -39,9 +39,9 @@ function HCIAPractice() {
             </div>
         </div>
         
-        <div className={`text-sm flex flex-col md:flex-row items-center`}>
+        <div className={`text-sm flex flex-col md:flex-row items-start md:items-center gap-3`}>
             <h2 className={`font-bold`}>Technologies: </h2>
-            <ul className={`pl-5 flex flex-row flex-wrap gap-3 text-xs`}>
+            <ul className={`md:pl-5 flex flex-row flex-wrap gap-3 text-xs`}>
                 <li className={`px-3 py-1 bg-blue-100 rounded-full`}>Tailwind CSS</li>
                 <li className={`px-3 py-1 bg-blue-100 rounded-full`}>React</li>
                 <li className={`px-3 py-1 bg-blue-100 rounded-full`}>TypeScript</li>

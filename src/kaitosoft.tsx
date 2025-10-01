@@ -18,9 +18,9 @@ function Kaitosoft() {
             </p>
         </div>
         
-        <div className={`text-sm flex flex-col md:flex-row items-center`}>
+        <div className={`text-sm flex flex-col md:flex-row items-start md:items-center gap-3`}>
             <h2 className={`font-bold`}>Technologies: </h2>
-            <ul className={`pl-5 flex flex-row flex-wrap gap-3 text-xs`}>
+            <ul className={`md:pl-5 flex flex-row flex-wrap gap-3 text-xs`}>
                 <li className={`px-3 py-1 bg-blue-100 rounded-full`}>Tailwind CSS</li>
                 <li className={`px-3 py-1 bg-blue-100 rounded-full`}>React</li>
             </ul>
