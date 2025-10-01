@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+.comic-relief-regular {
+    font-family: "Comic Relief", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --blue: #476EAE;
+    --bg: #ffffff;
+}
+  
+@theme inline {
+    --color-blue: var(--blue);
+    --color-bg: var(--bg);
+}
+
+body {
+    color: var(--color-blue);
+    background-color: var(--color-bg);
+}
