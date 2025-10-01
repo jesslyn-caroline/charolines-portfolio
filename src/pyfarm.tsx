@@ -5,7 +5,7 @@ function Pyfarm() {
     return (
     <div className={`flex flex-col space-y-8 max-w-full w-full`}>
         <div className={`flex flex-col`}>
-            <a href="https://sentifica.vercel.app" className={`font-bold text-xl hover:underline`}>
+            <a href="https://github.com/jesslyn-caroline/harvesting-game-pyfarm" className={`font-bold text-xl hover:underline`}>
                 PyFarm: Harvesting Game<i className="ri-arrow-right-up-line"/>
             </a>
             <span className={`text-sm text-gray-500`}>Group Project • OOP • Console-based Game</span>
