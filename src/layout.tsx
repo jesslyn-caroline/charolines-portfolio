@@ -16,8 +16,8 @@ function Layout() {
     const location = useLocation()
 
     return (
-    <div className={`max-w-[1920px] min-h-screen w-screen h-fit bg-white`}>
-        <div className={`px-8 py-16 flex flex-col space-y-8 z-30`}>
+    <div className={`max-w-[1920px] min-h-screen w-screen bg-white  overflow-y-visible scroll-bar-hidden`}>
+        <div className={`px-8 md:px-16 py-16 flex flex-col space-y-8 z-30`}>
             <div className={`flex flex-col space-y-2`}>
                 <h2 className={`font-bold text-xl`} ><i className="ri-code-line"/>&ensp;Jesslyn Caroline.&ensp;<i className="ri-code-s-slash-line"/></h2>
                 <h3 className={`text-black`}>A 3rd-year Computer Science student who enjoys Competitive Programming and exploring new things in Development!</h3>
