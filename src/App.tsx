@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import { Analytics } from "@vercel/analytics/next"
+import { useParams } from "react-router-dom"
 
 import Layout from "./layout"
 import HCIAPractice from "./hcia-practice"
@@ -10,6 +11,9 @@ import Cinnamon from "./cinnamon"
 import Fukuro from "./fukuro"
 
 function App() {
+
+  const { project } = useParams()
+  console.log(project)
 
   return (
     <>
