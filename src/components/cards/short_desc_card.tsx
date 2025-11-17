@@ -6,7 +6,7 @@ function ShortDescCard() {
             <ul className={`text-sm flex flex-col gap-y-1.5`}>
                 <li>🏫 I am a 3rd year Computer Science student</li>
                 <li>⚡️ I do <span className={`font-semibold text-primary`}>Competitive Programming</span></li>
-                <li>💻 Developing my skills in Web Development</li>
+                <li>💻 Developing my skills in <span className={`font-semibold text-primary`}>Web Development   </span></li>
                 <li>🌱 More experienced in Front-End Web Development</li>
             </ul>
         </div>
