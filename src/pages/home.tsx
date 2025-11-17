@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import ShortDescCard from "../components/cards/short_desc_card";
 import TechnologiesCard from "../components/cards/technologies_card";
 
@@ -15,12 +17,17 @@ function Home() {
             <h2 className={`text-md`}>
                 A 3rd year Computer Science student at Mikroskil University, who likes competitive programming and continuously exploring curiosity in technology.
             </h2>
-            <div className={`grid lg:grid-cols-2 gap-5 mt-3.5`}>
-                <ShortDescCard />
-                <TechnologiesCard />
-            </div>
-            {/* <hr className={`border border-secondary my-3.5`}/> */}
-            
+            <motion.div 
+                variants={{ hidden: {}, show: { transition: { staggerChildren: 0.5 } }}}
+                initial="hidden" whileInView="show"
+                className={`grid lg:grid-cols-2 gap-5 mt-3.5`}>
+                <motion.div variants={{ hidden: { opacity: 0, y: "100%" }, show: { opacity: 1, y: 0, transition: { duration: 1 } }}}>
+                    <ShortDescCard />
+                </motion.div>
+                <motion.div variants={{ hidden: { opacity: 0, y: "100%" }, show: { opacity: 1, y: 0, transition: { duration: 1 } }}}>
+                    <TechnologiesCard />
+                </motion.div>
+            </motion.div>
         </div>
     )
 }
