@@ -57,27 +57,30 @@ function HCIAPracticeFeatures () {
 }
 
 function Testing () {
+    const copyToClipboard = (text:string) => navigator.clipboard.writeText(text);
+
+
     return (
     <div className={`mt-4 flex flex-col space-y-1`}>
         <h2 className={`font-bold text-primary text-md`}>For Testing</h2>
         <table className={`text-sm`}>
             <thead className={`text-secondary`}>
                 <tr>
-                    <th className="text-left">Role</th>
-                    <th className="text-left">Username</th>
-                    <th className="text-left">Password</th>
+                    <th className="text-left py-1.5">Role</th>
+                    <th className="text-left py-1.5">Username</th>
+                    <th className="text-left py-1.5">Password</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Admin</td>
-                    <td>admin01.kelvinchen</td>
-                    <td>admin01.hwp</td>
+                    <td className={`py-1.5`}>Admin</td>
+                    <td className={`py-1.5 hover:underline cursor-copy`} onClick={() => copyToClipboard("admin01.kelvinchen")}>admin01.kelvinchen</td>
+                    <td className={`py-1.5 hover:underline cursor-copy`} onClick={() => copyToClipboard("admin01.hwp")}>admin01.hwp</td>
                 </tr>
                 <tr>
-                    <td>Students</td>
-                    <td>231111664</td>
-                    <td>charoline</td>
+                    <td className={`py-1.5`}>Students</td>
+                    <td className={`py-1.5 hover:underline cursor-copy`} onClick={() => copyToClipboard("231111664")}>231111664</td>
+                    <td className={`py-1.5 hover:underline cursor-copy`} onClick={() => copyToClipboard("charoline")}>charoline</td>
                 </tr>
             </tbody>
         </table>
