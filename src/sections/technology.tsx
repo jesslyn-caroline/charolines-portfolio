@@ -4,11 +4,11 @@ interface Props {
 
 function Technology({technologies} : Props) {
     return (
-    <section className={`text-sm flex flex-col items-start gap-y-2`}>
-        <h2 className={`font-bold`}>{technologies.length == 1 ? "Technology" : "Technologies"} </h2>
+    <section className={`flex flex-col items-start gap-y-2`}>
+        <h2 className={`font-bold text-primary text-md`}>{technologies.length == 1 ? "Technology" : "Technologies"} </h2>
         <ul className={`flex flex-row flex-wrap gap-3 text-xs`}>
             { technologies.map((technology) => {
-                return <li className={`px-3 py-1 bg-blue-100 rounded-full`}>{technology}</li>
+                return <li className={`px-3 py-1 bg-accent text-primary font-semibold rounded-full`}>{technology}</li>
             })}
         </ul>
     </section>

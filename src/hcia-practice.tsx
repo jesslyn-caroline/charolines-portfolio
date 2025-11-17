@@ -33,19 +33,19 @@ function HCIAPractice() {
 
 function HCIAPracticeFeatures () {
     return (
-    <div className={`text-md flex flex-col space-y-1`}>
-        <h2 className={`font-bold`}>Features</h2>
+    <div className={`flex flex-col space-y-1`}>
+        <h2 className={`font-bold text-primary`}>Features</h2>
         <div className={`grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-y-1 gap-x-5`}>
             <div className={`text-sm flex flex-col gap-y-1`}>
-                <span className={`font-semibold`}>Students</span>
-                <ul className={`text-black pl-5`}>
+                <span className={`font-semibold text-secondary`}>Students</span>
+                <ul className={`pl-5`}>
                     <li className={`list-disc pl-3`}>Play Quiz in two mode, timer will not pause when user switch tab</li>
                     <li className={`list-disc pl-3`}>Review questions from previous attempts</li>
                 </ul>
             </div>
             <div className={`text-sm flex flex-col gap-y-1`}>
-                <span className={`font-semibold`}>Admin</span>
-                <ul className={`text-black pl-5`}>
+                <span className={`font-semibold text-secondary`}>Admin</span>
+                <ul className={`pl-5`}>
                     <li className={`list-disc pl-3`}>Create and manage questions</li>
                     <li className={`list-disc pl-3`}>Play Quiz in two mode, timer will not pause when user switch tab</li>
                     <li className={`list-disc pl-3`}>Review questions from previous attempts</li>
@@ -58,24 +58,29 @@ function HCIAPracticeFeatures () {
 
 function Testing () {
     return (
-    <div className={`mt-4 text-md flex flex-col space-y-1`}>
-        <h2 className={`font-bold`}>For Testing</h2>
-        <div className={`grid grid-cols-2 md:grid-cols-2 gap-5`}>
-            <div className={`text-sm flex flex-col gap-y-1`}>
-                <span className={`font-semibold`}>Students</span>
-                <ul className={`text-black`}>
-                    <li>Username: 231111664</li>
-                    <li>Password: charoline</li>
-                </ul>
-            </div>
-            <div className={`text-sm flex flex-col gap-y-1`}>
-                <span className={`font-semibold`}>Admin</span>
-                <ul className={`text-black`}>
-                    <li>Username: admin01.kelvinchen</li>
-                    <li>Password: admin01.hwp</li>
-                </ul>
-            </div>
-        </div>
+    <div className={`mt-4 flex flex-col space-y-1`}>
+        <h2 className={`font-bold text-primary text-md`}>For Testing</h2>
+        <table className={`text-sm`}>
+            <thead className={`text-secondary`}>
+                <tr>
+                    <th className="text-left">Role</th>
+                    <th className="text-left">Username</th>
+                    <th className="text-left">Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Admin</td>
+                    <td>admin01.kelvinchen</td>
+                    <td>admin01.hwp</td>
+                </tr>
+                <tr>
+                    <td>Students</td>
+                    <td>231111664</td>
+                    <td>charoline</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     )
 }

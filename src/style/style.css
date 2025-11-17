@@ -7,13 +7,27 @@
 }
 
 :root {
-    --blue: #476EAE;
-    --bg: #ffffff;
+    --text: #0c0c0d;
+    --background: #f2f4f8;
+    --primary: #0647a7;
+    --secondary: #5f96fc;
+    --accent: #c4dff2;
+}
+
+[data-theme="dark"] {
+    --text: #f2f2f3;
+    --background: #07090d;
+    --primary: #5898f9;
+    --secondary: #1447e6;
+    --accent: #162456;
 }
   
 @theme inline {
-    --color-blue: var(--blue);
-    --color-bg: var(--bg);
+    --color-text: var(--text);
+    --color-background: var(--background);
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+    --color-accent: var(--accent);
 }
 
 .scroll-bar-hidden::-webkit-scrollbar {
@@ -26,7 +40,6 @@
   scrollbar-width: none;  /* Firefox */
 }
 
-body {
-    color: var(--color-blue);
-    background-color: var(--color-bg);
+* {
+    font-family: "Poppins", sans-serif;
 }

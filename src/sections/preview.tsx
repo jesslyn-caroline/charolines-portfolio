@@ -9,8 +9,8 @@ interface Props {
 function PreviewSection({folderDir, images, previewPerPage = 1} : Props) {
     return (
     <section>
-        <h3 className={`text-lg font-bold mt-8`}>Preview</h3>
-        <div className={`w-full max-w-3xl`}>
+        <h3 className={`text-lg font-bold mt-8 text-primary`}>Preview</h3>
+        <div className={`w-full`}>
             <Carousel_ num={previewPerPage}>
                 { images.map((image) => {
                     return (

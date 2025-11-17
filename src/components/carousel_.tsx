@@ -28,7 +28,7 @@ function Carousel_({children, num} : {children: React.ReactNode, num: number}) {
           dotListClass="mt-6 flex justify-center gap-2"
           renderDotsOutside={true}
           renderButtonGroupOutside={true}
-          itemClass="w-full px-2"
+          itemClass="w-full"
           focusOnSelect={true}
         >
           {children}

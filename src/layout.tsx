@@ -1,44 +1,21 @@
-import { Link, Outlet, useLocation } from "react-router"
+import { Outlet } from "react-router"
+import SwitchModeBtn from "./components/buttons/switch_mode_btn"
+import ProjectsCard from "./components/cards/projects_card"
 
 function Layout() {
-    const routes:{
-        path: string,
-        name: string
-    }[] = [
-        { "path" : "/hcia-practice", "name" : "HCIA Practice" },
-        { "path" : "/sentifica", "name" : "Sentifica" },
-        { "path" : "/pyfarm", "name" : "PyFarm: Harvesting Game" },
-        { "path" : "/kaitosoft", "name" : "Kaitosoft" },
-        { "path" : "/cinnamon", "name" : "Cinnamon" },
-        { "path" : "/fukuro", "name" : "fukuro" },
-    ]
-
-    const location = useLocation()
-
     return (
-    <div className={`max-w-[1920px] min-h-screen w-screen bg-white  overflow-y-visible scroll-bar-hidden`}>
-        <div className={`px-8 md:px-16 py-16 flex flex-col space-y-8 z-30`}>
-            <div className={`flex flex-col space-y-2`}>
-                <h2 className={`font-bold text-xl`} ><i className="ri-code-line"/>&ensp;Jesslyn Caroline.&ensp;<i className="ri-code-s-slash-line"/></h2>
-                <h3 className={`text-black`}>A 3rd-year Computer Science student who enjoys Competitive Programming and exploring new things in Development!</h3>
+    <div className={`flex justify-center w-full h-full bg-background text-text transition overflow-y-visible scroll-bar-hidden`}>
+        <div className={`max-w-[1920px] min-h-screen w-screen flex flex-col overflow-y-visible scroll-bar-hidden`}>
+            <div className={`min-h-16 h-16 w-full px-8 md:px-16 lg:px-24 flex justify-end items-center`}>
+                <SwitchModeBtn />
             </div>
-            <div className={`flex flex-col-reverse md:flex-row gap-y-16 md:gap-x-16 md:gap-y-0 overflow-y-scroll scroll-bar-hidden`}>
-                <div className={`min-w-1/6 flex flex-col space-y-2`}>
-                    <h2 className={`text-lg flex items-center`}>
-                        <i className="ri-git-repository-line text-xl"/>&ensp; <span className={`font-bold`}>Projects</span>
-                    </h2>
-                    {
-                        routes.map((route) => (
-                            <Link to={route.path} className={`text-black hover:underline ${location.pathname === route.path ? "font-bold underline" : ""} transition`}>{route.name}</Link>
-                        ))
-                    }
-                 
-                </div>
-                <div className={``}>
-                    <Outlet />
+            <div className={`px-8 md:px-16 lg:px-24 pb-36`}> 
+                <Outlet />
+                <div className={`mt-8`}>
+                    <ProjectsCard />
                 </div>
             </div>
-        </div>     
+        </div>
     </div>
     )
 }
