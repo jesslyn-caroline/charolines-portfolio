@@ -20,7 +20,7 @@ function ProjectsCard() {
                 {
                     projects.map((project) => {
                         return (
-                        <Link to={project.path} className={`${location.pathname === project.path ? "underline font-semibold text-primary" : "text-text"}`}>{project.value}</Link>
+                        <Link to={project.path} className={`text-sm ${location.pathname === project.path ? "underline font-semibold text-primary" : "text-text"} hover:underline`}>{project.value}</Link>
                         )
                     })
                 }
