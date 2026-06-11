@@ -4,14 +4,14 @@ import TwinklingStar from "../assets/TwinklingStar"
 import ContactBtn from "../components/buttons/ContactBtn"
 import PageBorder from "../assets/PageBorder"
 import Particle from "../assets/Particle"
-import StarBorder from "../assets/StarBorder"
+import StarBorder1 from "../assets/StarBorder1"
 
 function Hero() {
     return (
     <div className={`max-h-255 min-h-screen w-full flex justify-center items-center relative`}>
         <div className={`w-fit h-fit flex flex-col justify-center items-center gap-y-3 mt-15 px-16`}>
             <h1 className={`text-3xl md:text-5xl text-[#7B3306] text-center`}>Jesslyn Caroline</h1>
-            <StarBorder />
+            <StarBorder1 />
             <h2 className={`max-w-xl text-sm md:text-md text-center text-[#7B3306] opacity-70`}>
                 Full-stack developer and creative technologist passionate about crafting beautiful, meaningful digital experiences. I blend technical expertise with artistic sensibility to build products that delight and inspire.
             </h2>
