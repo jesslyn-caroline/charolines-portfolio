@@ -6,7 +6,7 @@ import Technology from "./sections/Technology"
 function App() {
   return (
     <div className={`w-full h-full flex justify-center pb-40`}>
-      {/* <NavigationBar /> */}
+      <NavigationBar />
 
       <div className={`max-w-480 min-h-screen w-screen h-fit flex flex-col justify-center`}>
         <Hero />
