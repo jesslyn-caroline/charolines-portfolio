@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+* {
+    font-family: 'Georgia', sans-serif;
+}
+
+body {
+    background: linear-gradient(70deg, #FFFBEB, #FFF7ED, #FFF1F2);
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    /* cursor: url('/feather.svg'), auto; */
+}
+
+img {
+    pointer-events: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7B3306;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFFBEB;
+}
+
+html {
+    scrollbar-color: #7B3306 #FFFBEB;
+    scrollbar-width: 5px;
+}
+
+a {
+    outline: none;
+}
