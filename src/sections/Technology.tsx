@@ -4,7 +4,7 @@ import { skillsAndTechnologies } from "../data/technologies"
 
 function Technology() {
     return (
-    <div className={`px-5 lg:px-20 py-16 flex flex-col`}>
+    <div className={`px-5 lg:px-20 py-24 flex flex-col`}>
         <div className={`w-full flex flex-col justify-center items-center gap-y-3`}>
             <h1 className={`text-4xl text-[#7B3306] text-center`}>Skill & Technology</h1>
             <StarBorder />
