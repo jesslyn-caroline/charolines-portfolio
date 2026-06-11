@@ -1,5 +1,6 @@
 import NavigationBar from "./components/navigations/NavigationBar"
 import About from "./sections/About"
+import Education from "./sections/Education"
 import Hero from "./sections/Hero"
 import Technology from "./sections/Technology"
 
@@ -12,6 +13,7 @@ function App() {
         <Hero />
         <div id='about'><About /></div>
         <div id='skills'><Technology /></div>
+        <div id='education'><Education /></div>
       </div>
     </div>
     
