@@ -4,6 +4,8 @@ function NavigationBar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const toggleMenu = (value: boolean) => setIsOpen(value);
 
+    const menu: string[] = ['About', 'Skills', 'Education', 'Experience'];
+
     return (
     <div className={`w-full flex md:justify-center fixed top-5 left-5 z-5`}>
         <div className={`
@@ -18,10 +20,7 @@ function NavigationBar() {
                 <img src='/magic-wand-1.svg' alt='Magic Wand' className={`size-6`}/>
             </button>
             <div className={`hidden md:flex flex-row items-center gap-x-4`}>
-                <a href='#about' className={`opacity-60`}>About</a>
-                <a href='#skills' className={`opacity-60`}>Skills</a>
-                <span className={`opacity-60`}>Contact</span>
-                <span className={``}>Resume</span>
+                { ...menu.map((item) => (<a key={item} href={`#${item.toLowerCase()}`} className={`opacity-60`}>{item}</a>))}
             </div>
         </div>
         <div className={`
@@ -30,10 +29,7 @@ function NavigationBar() {
             text-[#973C00] text-md 
             flex flex-col items-center gap-y-10 py-10 md:hidden 
         `}>
-            <a href='#about' className={`opacity-60`}>About</a>
-            <a href='#skills' className={`opacity-60`}>Skills</a>
-            <span className={`opacity-60`}>Contact</span>
-            <span className={``}>Resume</span>
+            { ...menu.map((item) => (<a key={item} href={`#${item.toLowerCase()}`} className={`opacity-60`}>{item}</a>))}
             <span className={` cursor-pointer`} onClick={() => toggleMenu(false)}>Close</span>
         </div>
     </div>
