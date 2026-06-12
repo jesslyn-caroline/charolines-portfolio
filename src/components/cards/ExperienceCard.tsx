@@ -16,7 +16,7 @@ function ExperienceCard({company, position, startDate, endDate, responsibilities
                 <span className={`text-[#973C00] text-xs`}>{startDate} - {endDate}</span>
             </div>
             <div>
-                <h1 className={`text-lg text-[#7B3306] font-medium`}>{position}</h1>
+                <h1 className={`text-lg text-[#7B3306] font-semibold`}>{position}</h1>
                 <h2 className={`text-sm text-[#BB4D00] font-medium`}>{company}</h2>
             </div>
             <ul className={`text-sm list-disc list-inside`}>
