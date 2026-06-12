@@ -1,11 +1,21 @@
+import { useLocation } from "react-router"
 import NavigationBar from "./components/navigations/NavigationBar"
 import About from "./sections/About"
 import Education from "./sections/Education"
 import Experience from "./sections/Experience"
 import Hero from "./sections/Hero"
 import Technology from "./sections/Technology"
+import { useEffect } from "react"
 
 function App() {
+  const location = useLocation()
+
+  useEffect(() => {
+    document.getElementById(location.hash.slice(1))?.scrollIntoView({ 
+      behavior: 'smooth' 
+    })
+  }, [])
+
   return (
     <div className={`w-full h-full flex justify-center pb-40`}>
       <NavigationBar />
