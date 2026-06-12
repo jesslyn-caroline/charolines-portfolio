@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(70deg, #FFFBEB, #FFF7ED, #FFF1F2);
+    background: linear-gradient(110deg, #FFFBEB, #FFF7ED, #FFF1F2);
     display: flex;
     justify-content: center;
     overflow-x: hidden;
