@@ -6,6 +6,7 @@ import Experience from "./sections/Experience"
 import Hero from "./sections/Hero"
 import Technology from "./sections/Technology"
 import { useEffect } from "react"
+import Projects from "./sections/Projects"
 
 function App() {
   const location = useLocation()
@@ -26,6 +27,7 @@ function App() {
         <div id='skills'><Technology /></div>
         <div id='education'><Education /></div>
         <div id='experience'><Experience /></div>
+        <div id='projects'><Projects /></div>
       </div>
     </div>
     
