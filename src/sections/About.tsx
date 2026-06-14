@@ -13,9 +13,7 @@ function About() {
             <h1 className={`text-4xl text-[#7B3306] text-center`}>About Her</h1>
             <StarBorder1 />
             <h2 className={`max-w-2xl text-md text-center text-[#7B3306] opacity-70 flex flex-col gap-y-1.5`}>
-                <p>
-                    Her name is Jesslyn Caroline. She enjoys exploring new ideas and diving deep into the world of Web Development. Driven by curiosity and a passion for technology, she is always eager to learn new tools, frameworks, and techniques that help her grow as a developer. She enjoys solving problems, building interactive web applications, and creating user-friendly digital experiences. Through continuous learning and hands-on projects, she strives to improve her skills and stay up to date with the ever-evolving technology landscape.
-                </p>
+                Her name is Jesslyn Caroline. She enjoys exploring new ideas and diving deep into the world of Web Development. Driven by curiosity and a passion for technology, she is always eager to learn new tools, frameworks, and techniques that help her grow as a developer. She enjoys solving problems, building interactive web applications, and creating user-friendly digital experiences. Through continuous learning and hands-on projects, she strives to improve her skills and stay up to date with the ever-evolving technology landscape.
             </h2>
         </div>
 
