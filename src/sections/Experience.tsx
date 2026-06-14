@@ -9,13 +9,9 @@ function Experience() {
         <StarBorder1 />
         <div className={`max-w-4xl w-full flex flex-col gap-y-5 relative md:px-10 pt-5 pb-16`}>
             <div className={`w-1 h-full bg-linear-to-b from-[#FFB90066] via-[#FF637E66] to-[#FFB90033] rounded-sm absolute top-0 lg:left-10`} />
-            {
-                ...experiences.map((experience) => {
-                    return (
-                        <ExperienceCard {...experience}/>
-                    )
-                })
-            }
+            { ...experiences.map((experience) => {
+                return <ExperienceCard {...experience}/>
+            }) }
         </div>
     </div>
 )}

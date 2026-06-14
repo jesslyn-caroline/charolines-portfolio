@@ -9,13 +9,9 @@ function Technology() {
             <h1 className={`text-4xl text-[#7B3306] text-center`}>Skill & Technology</h1>
             <StarBorder1 />
             <div className={`mt-6 grid grid-cols-1 md:grid-cols-2 gap-8`}>
-            {
-                ...skillsAndTechnologies.map((skillAndTech) => {
-                    return (
-                        <TechnologyCard {...skillAndTech}/>
-                    )
-                })
-            }
+            { ...skillsAndTechnologies.map((skillAndTech) => {
+                return <TechnologyCard {...skillAndTech}/>
+            }) }
             </div>
         </div>
     </div>
