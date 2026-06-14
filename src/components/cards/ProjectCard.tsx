@@ -20,7 +20,7 @@ function ProjectCard({ name, description, link, year, tags }: ProjectCardProps) 
                 return (
                 <span className={`
                     bg-[#FEF3C6] w-fit h-fit px-3 py-1 
-                    border border-[#FFD23080] rounded-full 
+                    border-2 border-[#FFD23080] rounded-full 
                     text-[#973C00] text-xs font-medium
                 `}>{ tag }</span>
             )}) }
