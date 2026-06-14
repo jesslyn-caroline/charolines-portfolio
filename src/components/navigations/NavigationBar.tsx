@@ -4,7 +4,7 @@ function NavigationBar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const toggleMenu = (value: boolean) => setIsOpen(value);
 
-    const menu: string[] = ['About', 'Skills', 'Education', 'Experience'];
+    const menu: string[] = ['About', 'Skills', 'Education', 'Experience', 'Projects'];
 
     return (
     <div className={`w-full flex md:justify-center fixed top-5 left-5 z-5`}>
