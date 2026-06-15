@@ -13,7 +13,7 @@ function PreviewCarousel({ dir, total }: { dir: string, total: number }) {
 
     return (
     <div className={`w-full border-2 border-[#FFD230] rounded-lg relative`}>
-        <img src={`${dir}/${num}.png`} alt='Preview' className={`w-full rounded-lg z-0`} />
+        <img src={`${dir}/${num}.png`} alt='Preview' className={`w-full rounded-lg z-0 shadow-[0_10px_40px_0px_#783C0A40]`} />
     </div>
 )}
 
