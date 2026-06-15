@@ -21,7 +21,6 @@ function ProjectDetail() {
             <span className={`text-[#7B3306B3]`}>Back</span>
         </Link>
         <div className={`w-full flex flex-col`}>
-            <span className={`text-[#FE9A0099] text-md`}>{ project.year }</span>
             { project.link ? 
                 <Link to={ project.link } className={`mt-5 flex flex-row items-center gap-x-3`}>
                     <h1 className={`text-2xl md:text-3xl text-[#7B3306]`}>{ project.name }</h1>
@@ -30,7 +29,7 @@ function ProjectDetail() {
                 <h1 className={`mt-5 text-2xl md:text-3xl text-[#7B3306]`}>{ project.name }</h1> }
             <StarBorder3 />
         </div>
-        <PreviewCarousel dir={project.previewSrc} total={project.total} /> 
+        <PreviewCarousel dir={project.previewSrc} total={project.totalPreview} /> 
 
         <h2 className={`mt-5 text-[#7B3306] text-sm font-semibold`}>{ project.shortDesc }</h2>
         <p className={`text-[#7B33068C] text-sm leading-6`}>{ project.desc }</p>
