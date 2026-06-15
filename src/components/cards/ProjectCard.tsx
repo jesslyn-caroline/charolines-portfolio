@@ -2,7 +2,7 @@ import { RiExternalLinkLine } from "@remixicon/react"
 import type { ProjectCardProps } from "../../data/projects"
 import { Link } from "react-router"
 
-function ProjectCard({ name, description, path,  year, tags }: ProjectCardProps) {
+function ProjectCard({ name, shortDesc, path,  year, tags }: ProjectCardProps) {
     return (
     <div className={`
         bg-linear-to-br from-[#FFFBEB] to-[#FFF1F2] border-2 border-[#FFD23080] 
@@ -14,7 +14,7 @@ function ProjectCard({ name, description, path,  year, tags }: ProjectCardProps)
             <Link to={`/projects/${path}`} target="_blank"><RiExternalLinkLine className={`text-[#E1710080] size-5`} /></Link>
         </div>
         <h3 className={`text-[#7B3306] text-xl font-medium`}>{ name }</h3>
-        <p className={`text-[#7B3306B3] text-sm leading-6`}>{ description }</p>
+        <p className={`text-[#7B3306B3] text-sm leading-6`}>{ shortDesc }</p>
         <div className={`mt-3 flex flex-row flex-wrap gap-2`}>
             { ...tags.map((tag) => {
                 return (
