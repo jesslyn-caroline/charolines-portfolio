@@ -14,7 +14,6 @@ function PreviewCarousel({ dir, total }: { dir: string, total: number }) {
     return (
     <div className={`w-full border-2 border-[#FFD230] rounded-lg relative`}>
         <img src={`${dir}/${num}.png`} alt='Preview' className={`w-full rounded-lg z-0`} />
-        <div className={`h-16 bg-linear-to-t from-[#FFD230] absolute bottom-0 w-full z-5`}> asdas</div>
     </div>
 )}
 
