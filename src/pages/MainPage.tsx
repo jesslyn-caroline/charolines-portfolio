@@ -1,11 +1,11 @@
 import { useLocation } from "react-router"
-import About from "../../sections/About"
-import Education from "../../sections/Education"
-import Experience from "../../sections/Experience"
-import Hero from "../../sections/Hero"
-import Projects from "../../sections/Projects"
-import Technology from "../../sections/Technology"
-import NavigationBar from "../navigations/NavigationBar"
+import About from "../sections/About"
+import Education from "../sections/Education"
+import Experience from "../sections/Experience"
+import Hero from "../sections/Hero"
+import Projects from "../sections/Projects"
+import Technology from "../sections/Technology"
+import NavigationBar from "../components/navigations/NavigationBar"
 import { useEffect } from "react"
 
 function MainPage() {
