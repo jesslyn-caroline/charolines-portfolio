@@ -5,7 +5,7 @@ export interface ProjectCardProps {
     link?: string,
     path: string,
     previewSrc: string,
-    total: number,
+    totalPreview: number,
     year: number,
     tags: string[],
     features: string[],
@@ -22,7 +22,7 @@ export const projects:ProjectCardProps[] = [
         link: 'https://kelolain.vercel.app/',
         path: 'kelolain',
         previewSrc: '/project-previews/kelolain',
-        total: 7,
+        totalPreview: 7,
         year: 2026,
         tags: ['Python', 'TensorFlow', 'Deep Learning'],
         features: [
