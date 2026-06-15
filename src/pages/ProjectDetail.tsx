@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router"
 import { projects, type ProjectCardProps } from "../data/projects"
-import { RiArrowLeftLine, RiExternalLinkLine, RiGithubFill } from "@remixicon/react"
+import { RiArrowLeftLine, RiExternalLinkLine } from "@remixicon/react"
 import StarBorder3 from "../assets/StarBorder3"
 import PreviewCarousel from "../components/carousel/PreviewCarousel"
 
@@ -32,15 +32,11 @@ function ProjectDetail() {
         </div>
         <PreviewCarousel dir={project.previewSrc} total={project.total} /> 
 
-        <h2 className={`text-[#7B3306] text-sm font-semibold`}>{ project.shortDesc }</h2>
+        <h2 className={`mt-5 text-[#7B3306] text-sm font-semibold`}>{ project.shortDesc }</h2>
         <p className={`text-[#7B33068C] text-sm leading-6`}>{ project.desc }</p>
 
-        <div className={`flex flex-col py-3`}>
-            <h3 className={`flex flex-row items-center gap-x-4`}>
-                <span className={`text-[#E17100B3] font-medium uppercase text-xs tracking-widest`}>Features</span>
-                <div className={`w-full h-0.5 bg-linear-to-r from-[#FBBF2466] to-transparent`} />
-            </h3>
-            <ul className={`mt-2 flex flex-col gap-y-1 text-sm text-[#7B33068C]`}>
+        <ProjectDetailSection section='Features'>
+            <ul className={`flex flex-col gap-y-1 text-sm text-[#7B33068C]`}>
             { ...project.features.map((feature) => (
                 <li className={`flex items-center gap-3`}>
                     <img src="/star-4.svg" alt="" className={`w-3 h-3`} />
@@ -48,46 +44,55 @@ function ProjectDetail() {
                 </li>
             ))}
             </ul>
-        </div>
+        </ProjectDetailSection>
 
-        { project.responsibilities && <div className={`flex flex-col py-3`}>
-            <h3 className={`flex flex-row items-center gap-x-4`}>
-                <span className={`text-[#E17100B3] font-medium uppercase text-xs tracking-widest whitespace-nowrap`}>Key Responsibilities</span>
-                <div className={`w-full h-0.5 bg-linear-to-r from-[#FBBF2466] to-transparent`} />
-            </h3>
-            <ul className="mt-2 flex flex-col gap-y-1 text-sm text-[#7B33068C]">
-            { ...project.responsibilities.map((responsibility) => (
-                <li className={`flex items-center gap-3`}>
-                    <img src="/star-4.svg" alt="" className={`w-3 h-3`} />
-                    <span>{ responsibility }</span>
+        <ProjectDetailSection section='Project Details'>
+            <ul className={`flex flex-col divide-y divide-[#FBBF2433] text-sm text-[#7B33068C]`}>
+            { ...project.projectDetails.map((detail) => (
+                <li className={`py-3 flex flex-row justify-between items-center gap-3`}>
+                    <span className={`text-[#FE9A0099] text-xs font-medium uppercase`}>{ detail[0] }</span>
+                    { detail[0] === 'Github' ? 
+                        <a href={ detail[1] } target="_blank" className={`text-[#7B3306BF] text-xs font-medium underline`}>{ detail[1] }</a> : 
+                        <span className={`text-[#7B3306BF] text-xs font-medium`}>{ detail[1] }</span> 
+                    }
                 </li>
             ))}
             </ul>
-        </div> }
+        </ProjectDetailSection>
 
-        <div className={`flex flex-col py-3`}>
-            <h3 className={`flex flex-row items-center gap-x-4`}>
-                <span className={`text-[#E17100B3] font-medium uppercase text-xs tracking-widest whitespace-nowrap`}>Technologies</span>
-                <div className={`w-full h-0.5 bg-linear-to-r from-[#FBBF2466] to-transparent`} />
-            </h3>
-            <ul className={`mt-4 flex flex-row flex-wrap gap-4 text-sm text-[#7B3306CC] font-medium`}>
-            { ...project.technologies.map((responsibility) => (
-                <li className={`px-3.5 py-1 bg-[#FBBF241A] border border-[#FBBF2480] rounded-full`}>{ responsibility }</li>
+        { project.responsibilities && 
+            <ProjectDetailSection section='Responsibilities'>
+                <ul className={`flex flex-col gap-y-1 text-sm text-[#7B33068C]`}>
+                { ...project.responsibilities.map((responsibility) => (
+                    <li className={`flex items-center gap-3`}>
+                        <img src="/star-4.svg" alt="" className={`w-3 h-3`} />
+                        <span>{ responsibility }</span>
+                    </li>
+                ))}
+                </ul>
+            </ProjectDetailSection> }
+        
+        <ProjectDetailSection section='Technologies'>
+            <ul className={`flex flex-row flex-wrap gap-4 text-xs text-[#7B3306CC] font-medium`}>
+            { ...project.technologies.map((technology) => (
+                <li className={`px-3.5 py-1.5 bg-[#FBBF241A] border border-[#FBBF2480] rounded-full`}>{ technology }</li>
             ))}
             </ul>
-        </div> 
-        
-        <Link to={ project.github } className={`
-            mt-10 w-fit bg-[#FEF3C6] border-[#FFD23080] border-2 text-[#973C00]
-            flex flex-row items-center gap-x-2
-            hover:bg-[#FEE685] hover:border-[#FFB900] 
-            animation ease-in duration-200
-            rounded-full px-3 py-2
-        `}>
-            <RiGithubFill className={`size-5`} />
-            <span className={`text-sm font-medium`}>Github</span>
-        </Link>
+        </ProjectDetailSection>
     </div>  
 )}
 
 export default ProjectDetail
+
+function ProjectDetailSection({ section, children }: { section: string, children: React.ReactNode }) {
+    return (
+    <div className={`flex flex-col`}>
+        <h3 className={`flex flex-row items-center gap-x-4`}>
+            <span className={`text-[#E17100B3] font-medium uppercase text-xs tracking-widest whitespace-nowrap`}>{ section }</span>
+            <div className={`w-full h-0.5 bg-linear-to-r from-[#FBBF2466] to-transparent`} />
+        </h3>
+        <div className={`py-3.5`}>
+            { children }
+        </div>
+    </div>
+)}

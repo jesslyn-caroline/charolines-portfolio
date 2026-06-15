@@ -9,10 +9,9 @@ export interface ProjectCardProps {
     year: number,
     tags: string[],
     features: string[],
-    github: string,
     technologies: string[],
-    team?: string,
     responsibilities?: string[],
+    projectDetails: [string, string][]
 }
 
 export const projects:ProjectCardProps[] = [
@@ -35,14 +34,18 @@ export const projects:ProjectCardProps[] = [
             'Demand Prediction for Low-Stock Products',
             'Product Bundling Recommendations',
         ],
-        github: 'https://github.com/jesslyn-caroline/CC26-PSU248-Kelolain',
         technologies: ['Python', 'TensorFlow', 'Gemini API', 'PaddleOCR', 'Flask', 'React', 'Tailwind CSS', 'Express.js', 'PostgreSQL', 'Prisma'],
-        team: '2 Web Developers, 2 Data Scientists, 2 AI Engineer',
         responsibilities: [
             'Built blur image classification using TensorFlow to detect low-quality receipt images before OCR processing',
             'Built OCR-based receipt text extraction using PaddleOCR to extract text from receipt images',
             'Integrated Gemini API to classify extracted text into structured fields (item name, quantity, and price)',
             'Deployed AI model to production using Railway',
+        ],
+        projectDetails: [
+            ['Year', '2026'],
+            ['Team', '2 Web Developers, 2 Data Scientists, 2 AI Engineers'],
+            ['My Role', 'AI Engineer'],
+            ['Github', 'https://github.com/jesslyn-caroline/CC26-PSU248-Kelolain'],
         ]
     },
 ]
