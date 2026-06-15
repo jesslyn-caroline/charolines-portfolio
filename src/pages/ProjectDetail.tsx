@@ -32,18 +32,19 @@ function ProjectDetail() {
         <PreviewCarousel dir={project.previewSrc} total={project.totalPreview} /> 
 
         <h2 className={`mt-5 text-[#7B3306] text-sm font-semibold`}>{ project.shortDesc }</h2>
-        <p className={`text-[#7B33068C] text-sm leading-6`}>{ project.desc }</p>
+        <p className={`mb-5 text-[#7B33068C] text-sm leading-6`}>{ project.desc }</p>
 
-        <ProjectDetailSection section='Features'>
-            <ul className={`flex flex-col gap-y-1 text-sm text-[#7B33068C]`}>
-            { ...project.features.map((feature) => (
-                <li className={`flex items-center gap-3`}>
-                    <img src="/star-4.svg" alt="" className={`w-3 h-3`} />
-                    <span>{ feature }</span>
-                </li>
-            ))}
-            </ul>
-        </ProjectDetailSection>
+        { project.features && 
+            <ProjectDetailSection section='Features'>
+                <ul className={`flex flex-col gap-y-1 text-sm text-[#7B33068C]`}>
+                { ...project.features.map((feature) => (
+                    <li className={`flex items-center gap-3`}>
+                        <img src="/star-4.svg" alt="" className={`w-3 h-3`} />
+                        <span>{ feature }</span>
+                    </li>
+                ))}
+                </ul>
+            </ProjectDetailSection> }
 
         <ProjectDetailSection section='Project Details'>
             <ul className={`flex flex-col divide-y divide-[#FBBF2433] text-sm text-[#7B33068C]`}>
