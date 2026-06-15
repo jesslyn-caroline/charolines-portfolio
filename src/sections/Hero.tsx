@@ -8,7 +8,7 @@ import StarBorder1 from "../assets/StarBorder1"
 
 function Hero() {
     return (
-    <div className={`max-h-255 min-h-screen w-full flex justify-center items-center relative`}>
+    <div className={`max-h-255 h-screen w-full flex justify-center items-center relative`}>
         <div className={`w-fit h-fit flex flex-col justify-center items-center gap-y-3 mt-15 px-16`}>
             <h1 className={`text-3xl md:text-5xl text-[#7B3306] text-center`}>Jesslyn Caroline</h1>
             <StarBorder1 />
