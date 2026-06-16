@@ -48,6 +48,7 @@ function NavigationBar() {
             flex flex-col items-center gap-y-10 py-10 md:hidden 
         `}>
             { ...menu.map((item) => (<a href={`#${item.toLowerCase()}`} className={`${activeSection === item.toLowerCase() ? 'active:opacity-100' : 'opacity-60'} transition-opacity duration-300`}>{item}</a>))}
+            <button onClick={() => toggleMenu(false)}>Close</button>
         </div>
     </div>
     
