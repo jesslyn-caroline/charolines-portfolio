@@ -51,7 +51,7 @@ export const projects:ProjectCardProps[] = [
     {
         name: 'Sentifica',
         shortDesc: 'Website for Sentiment Analysis of Text',
-        desc: 'Sentifica is an AI-powered web application designed to analyze the sentiment of user-provided text. The platform enables users to enter text through an responsive interface and receive sentiment analysis results in real time. By leveraging natural language processing (NLP) and machine learning techniques, Sentifica classifies text into sentiment categories such as positive, negative, or neutral. The application aims to help users gain insights into opinions, feedback dan reviews efficiently.', 
+        desc: 'Sentifica is an AI-powered web application designed to analyze the sentiment of user-provided text. The platform enables users to enter text through an responsive interface and receive sentiment analysis results in real time. By leveraging natural language processing (NLP) and machine learning techniques, Sentifica classifies text into sentiment categories such as positive, negative, or neutral. The application aims to help users gain insights into opinions, feedback, and reviews efficiently.', 
         path: 'sentifica',
         previewSrc: '/project-previews/sentifica',
         totalPreview: 6,
@@ -62,6 +62,7 @@ export const projects:ProjectCardProps[] = [
             ['Team', '1 UI/UX Designer, 1 Frontend Developer, 3 AI Engineers'],
             ['My Role', 'Frontend Developer'],
             ['Github', 'https://github.com/jesslyn-caroline/sentifica'],
+            ['Status', 'Inactive — backend services currently unavailable due to pricing limitations'],
         ],
         technologies: ['React.js', 'Tailwind CSS', 'Flask API', 'Scikit-learn'],
         responsibilities: [
@@ -85,6 +86,7 @@ export const projects:ProjectCardProps[] = [
             ['Team', '1 Frontend Developer, 1 Backend Developer'],
             ['My Role', 'Frontend Developer'],
             ['Github', 'https://github.com/jesslyn-caroline/hcia-practice'],
+            ['Status', 'Inactive — backend services currently unavailable due to pricing limitations'],
         ],
         technologies: ['React.js', 'TypeScript', 'Tailwind CSS', 'Express.js', 'MongoDB'],
         responsibilities: [
