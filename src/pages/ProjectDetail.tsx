@@ -49,7 +49,7 @@ function ProjectDetail() {
         <ProjectDetailSection section='Project Details'>
             <ul className={`flex flex-col divide-y divide-[#FBBF2433] text-sm text-[#7B33068C]`}>
             { ...project.projectDetails.map((detail) => (
-                <li className={`py-3 flex flex-row justify-between items-center gap-3`}>
+                <li className={`py-3 flex flex-col md:flex-row items-start justify-between gap-3`}>
                     <span className={`text-[#FE9A0099] text-xs font-medium uppercase`}>{ detail[0] }</span>
                     { detail[0] === 'Github' ? 
                         <a href={ detail[1] } target="_blank" className={`text-[#7B3306BF] text-xs font-medium underline`}>{ detail[1] }</a> : 
