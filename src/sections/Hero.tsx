@@ -5,6 +5,7 @@ import ContactBtn from "../components/buttons/ContactBtn"
 import PageBorder from "../assets/PageBorder"
 import Particle from "../assets/Particle"
 import StarBorder1 from "../assets/StarBorder1"
+import hero from "../data/hero"
 
 function Hero() {
     return (
@@ -13,7 +14,7 @@ function Hero() {
             <h1 className={`text-3xl md:text-5xl text-[#7B3306] text-center`}>Jesslyn Caroline</h1>
             <StarBorder1 />
             <h2 className={`max-w-xl text-sm md:text-md text-center text-[#7B3306] opacity-70`}>
-                Full-stack developer and creative technologist passionate about crafting beautiful, meaningful digital experiences. I blend technical expertise with artistic sensibility to build products that delight and inspire.
+                { hero }
             </h2>
             <div className={`flex flex-row gap-x-6 mt-10`}>
                 <ContactBtn icon={<RiLinkedinLine/>} link='https://www.linkedin.com/in/jesslyn-caroline/'/>
