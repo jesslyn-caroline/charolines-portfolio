@@ -36,7 +36,7 @@ const variants:any = {
 
 function TechnologyCard({ color, skill, technologies } : SkillCardProps) {
     return (
-    <div className={`w-full bg-[#fff8ebe8] border border-[#FFFFFF99] rounded-xl ${variants[color].borderShadow} p-8 hover:scale-102 transition ease-in-out duration-300`}>
+    <div className={`w-full bg-[#fff8ebe8] border border-[#FFFFFF99] rounded-xl ${variants[color].borderShadow} p-6 md:p-8 hover:scale-102 transition ease-in-out duration-300`}>
         <div className={`flex flex-col gap-y-3`}>
             <div className={`flex flex-row items-center gap-x-4`}>
                 <motion.div 
