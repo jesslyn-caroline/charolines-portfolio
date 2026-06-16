@@ -7,6 +7,7 @@ import Projects from "../sections/Projects"
 import Technology from "../sections/Technology"
 import NavigationBar from "../components/navigations/NavigationBar"
 import { useEffect } from "react"
+import Footer from "../components/navigations/Footer"
 
 function MainPage() {
     const location = useLocation()
@@ -17,10 +18,10 @@ function MainPage() {
     })}, [])
 
     return (
-    <div className={`w-full h-full flex justify-center pb-40`}>
+    <div className={`w-full h-full flex flex-col justify-center`}>
         <NavigationBar />
 
-        <div className={`max-w-480 min-h-screen w-screen h-fit flex flex-col justify-center`}>
+        <div className={`max-w-480 min-h-screen w-screen h-fit flex flex-col justify-center pb-30`}>
             <Hero />
             <div id='about'><About /></div>
             <div id='skills'><Technology /></div>
@@ -28,6 +29,8 @@ function MainPage() {
             <div id='experience'><Experience /></div>
             <div id='projects'><Projects /></div>
         </div>
+
+        <Footer />
     </div>
 )}
 
