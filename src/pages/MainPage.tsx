@@ -22,12 +22,12 @@ function MainPage() {
         <NavigationBar />
 
         <div className={`max-w-480 min-h-screen w-screen h-fit flex flex-col justify-center pb-30`}>
-            <Hero />
-            <div id='about'><About /></div>
-            <div id='skills'><Technology /></div>
-            <div id='education'><Education /></div>
-            <div id='experience'><Experience /></div>
-            <div id='projects'><Projects /></div>
+            <section><Hero /></section>
+            <section id='about'><About /></section>
+            <section id='skills'><Technology /></section>
+            <section id='education'><Education /></section>
+            <section id='experience'><Experience /></section>
+            <section id='projects'><Projects /></section>
         </div>
 
         <Footer />

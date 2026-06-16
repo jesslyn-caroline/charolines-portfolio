@@ -1,10 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function NavigationBar() {
-    const [isOpen, setIsOpen] = useState<boolean>(false);
-    const toggleMenu = (value: boolean) => setIsOpen(value);
+    const [isOpen, setIsOpen] = useState<boolean>(false)
+    const toggleMenu = (value: boolean) => setIsOpen(value)
 
-    const menu: string[] = ['About', 'Skills', 'Education', 'Experience', 'Projects'];
+    const menu: string[] = ['About', 'Skills', 'Education', 'Experience', 'Projects']
+
+    const [activeSection, setActiveSection] = useState<string>('')
+
+    useEffect(() => {
+        const sections = document.querySelectorAll('section')
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) setActiveSection(entry.target.id)
+            }), { threshold: 0.8 }
+        })
+
+        sections.forEach((section) => {
+            observer.observe(section)
+        })
+
+        return () => observer.disconnect()
+    }, [])
 
     return (
     <div className={`w-full flex md:justify-center fixed top-5 left-5 z-5`}>
@@ -20,7 +38,7 @@ function NavigationBar() {
                 <img src='/magic-wand-1.svg' alt='Magic Wand' className={`size-6`}/>
             </button>
             <div className={`hidden md:flex flex-row items-center gap-x-4`}>
-                { ...menu.map((item) => (<a href={`#${item.toLowerCase()}`} className={location.hash === `#${item.toLowerCase()}` ? 'opacity-100' : 'opacity-60 '}>{item}</a>))}
+                { ...menu.map((item) => (<a href={`#${item.toLowerCase()}`} className={`${activeSection === item.toLowerCase() ? 'active:opacity-100' : 'opacity-60'} transition-opacity duration-300`}>{item}</a>))}
             </div>
         </div>
         <div className={`
@@ -29,8 +47,7 @@ function NavigationBar() {
             text-[#973C00] text-md 
             flex flex-col items-center gap-y-10 py-10 md:hidden 
         `}>
-            { ...menu.map((item) => (<a href={`#${item.toLowerCase()}`} className={location.hash === `#${item.toLowerCase()}` ? 'opacity-100 underline' : 'opacity-60 '}>{item}</a>))}
-            <span className={`cursor-pointer`} onClick={() => toggleMenu(false)}>Close</span>
+            { ...menu.map((item) => (<a href={`#${item.toLowerCase()}`} className={`${activeSection === item.toLowerCase() ? 'active:opacity-100' : 'opacity-60'} transition-opacity duration-300`}>{item}</a>))}
         </div>
     </div>
     

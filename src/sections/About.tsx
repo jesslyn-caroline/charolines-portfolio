@@ -8,7 +8,7 @@ import StarBorder1 from "../assets/StarBorder1"
 
 function About() {
     return (
-    <div className={`w-full h-fit flex justify-center px-5 py-24 relative`}>
+    <div className={`w-full h-fit flex justify-center px-5 py-32 relative`}>
         <div className={`w-full flex flex-col justify-center items-center gap-y-3`}>
             <h1 className={`text-4xl text-[#7B3306] text-center`}>About Her</h1>
             <StarBorder1 />
