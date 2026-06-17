@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router"
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 import MainPage from "./pages/MainPage"
 import ProjectDetail from "./pages/ProjectDetail"
 
